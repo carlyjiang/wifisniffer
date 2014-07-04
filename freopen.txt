@@ -1,0 +1,165 @@
+successfully reassigned
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Connected
+
+mac_id: 00-B0-C1-03-1C-E6	ssid: wopow-1CE6
+rssi recoder: -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 
+
+mac_id: 0C-72-2C-52-B9-5E	ssid: tplink
+rssi recoder: -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 
+
+mac_id: 20-4E-7F-19-43-68	ssid: TPLINK-5Z62G
+rssi recoder: -68 -68 -68 -68 -70 -71 -71 -70 -71 -72 -71 -72 -68 -68 -69 -71 -71 -72 -72 -72 
+
+mac_id: 4C-1F-CC-B3-F4-39	ssid: ChinaNet-acQF
+rssi recoder: -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 
+
+mac_id: 8C-BE-BE-21-50-D3	ssid: Xiaomi_50D2
+rssi recoder: -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 
+
+mac_id: BC-D1-77-92-ED-F8	ssid: China-CMCC
+rssi recoder: -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 
+
+mac_id: C0-61-18-5D-12-82	ssid: BaLuoBo3
+rssi recoder: -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 
+
+mac_id: D8-15-0D-C5-4E-E8	ssid: TP-LINK_26-C
+rssi recoder: -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 
+

@@ -296,38 +296,6 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 				for (uint i = 0; i < pBssList->dwNumberOfItems; i++)
 				{
 					pBssEntry = &pBssList->wlanBssEntries[i];
-
-					//wprintf(L"  SSID[%u]:\t\t ", i);
-					if (pBssEntry->dot11Ssid.uSSIDLength == 0)
-					{
-						//wprintf(L"\n");
-					}
-					else
-					{
-						for (uint k = 0; k < pBssEntry->dot11Ssid.uSSIDLength; k++)
-						{
-							//wprintf(L"%c", (int)pBssEntry->dot11Ssid.ucSSID[k]);
-						}
-						//wprintf(L"\n");
-					}
-
-					//wprintf(L"  BSS id: ");
-					for (uint k = 0; k < 6; k++)
-					{
-						uint lowbit = pBssEntry->dot11Bssid[k] & 0xf;
-						uint highbit = (pBssEntry->dot11Bssid[k] & 0xf0) >> 4;
-						//wprintf(L"%X%X", highbit, lowbit);
-						//if (k != 5)
-							//wprintf(L"-");
-					}
-					//wprintf(L"\n");
-
-					get_mac_id(pBssEntry->dot11Bssid, mac_id);
-					//printf("          %s\n", mac_id.c_str());
-
-					//wprintf(L"  RSSI %ld dB\n", pBssEntry->lRssi);
-					//wprintf(L"\n");
-
 					get_mac_id(pBssEntry->dot11Bssid, mac_id);
 					if (find_at_radiomap(mac_id, result_map, pLocalizationNode) == true)
 					{
