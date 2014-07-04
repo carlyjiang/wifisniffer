@@ -2,11 +2,13 @@
 #define UNICODE
 #endif
 
+#ifndef __WIFI_INTERFACE__
+#define __WIFI_INTERFACE__
+
 #include <windows.h>
 #include <wlanapi.h>
 #include <objbase.h>
 #include <wtypes.h>
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -112,3 +114,5 @@ int interface_capatibility()
 
 	return 0;
 }
+
+#endif

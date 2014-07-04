@@ -2,7 +2,8 @@
 #define UNICODE
 #endif
 
-typedef unsigned int uint;
+#ifndef __WLAN_BSS_INFO__
+#define __WLAN_BSS_INFO__
 
 #include <windows.h>
 #include <wlanapi.h>
@@ -20,6 +21,8 @@ typedef unsigned int uint;
 // Need to link with Wlanapi.lib and Ole32.lib
 #pragma comment(lib, "wlanapi.lib")
 #pragma comment(lib, "ole32.lib")
+
+typedef unsigned int uint;
 
 class LocalizationNode
 {
@@ -328,7 +331,7 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 	return true;
 }
 
-int main()
+int test_main_wlan_bss_info()
 {
 	FILE *stream = NULL;
 	errno_t err;
@@ -368,4 +371,4 @@ int main()
 	return 0;
 }
 
-
+#endif
