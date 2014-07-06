@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClassTemp.cpp" />
+    <ClCompile Include="http_transport.cpp" />
     <ClCompile Include="int_to_string.cpp" />
     <ClCompile Include="wifi_interface.cpp" />
     <ClCompile Include="wifi_list.cpp" />

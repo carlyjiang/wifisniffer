@@ -22,7 +22,13 @@
 #pragma comment(lib, "wlanapi.lib")
 #pragma comment(lib, "ole32.lib")
 
+class LocalizationNode;
+
 typedef unsigned int uint;
+typedef std::vector<int>::iterator VECTOR_INT_ITER;
+typedef std::vector<int>::const_iterator VECTOR_INT_CONST_ITER;
+typedef std::map<std::string, LocalizationNode>::iterator RADIOMAP_ITER;
+typedef std::map<std::string, LocalizationNode>::const_iterator RADIOMAP_CONST_ITER;
 
 class LocalizationNode
 {
@@ -56,11 +62,11 @@ public:
 		}
 	}
 
-	std::vector<int>::iterator find_the_first_unidentical_position(std::vector<int> &rhs)
+	VECTOR_INT_ITER find_the_first_unidentical_position(std::vector<int> &rhs)
 	{
 		// returns the rhs iterator which points to the position of object that is unidentical to lhs one
-		std::vector<int>::iterator lhs_iter = this->rssi_recoder.begin();
-		std::vector<int>::iterator rhs_iter = rhs.begin();
+		VECTOR_INT_ITER lhs_iter = this->rssi_recoder.begin();
+		VECTOR_INT_ITER rhs_iter = rhs.begin();
 		for (; lhs_iter != this->rssi_recoder.end() && rhs_iter != rhs.end();
 			lhs_iter++, rhs_iter++)
 		{
@@ -76,12 +82,12 @@ public:
 		return true;
 	}
 
-	std::vector<int> & get_all_recoder()
+	std::vector<int> & get_all_recoders()
 	{
 		return rssi_recoder;
 	}
 
-	const std::string get_key() const
+	const std::string &get_key() const
 	{
 		return mac_id;
 	}
@@ -90,7 +96,7 @@ public:
 	{
 		out << "mac_id: " << this->mac_id 
 			<< "\tssid: " << this->ssid << "\nrssi recoder: ";
-		std::vector<int>::const_iterator iter = rssi_recoder.begin();
+		VECTOR_INT_CONST_ITER iter = rssi_recoder.begin();
 		for (; iter != rssi_recoder.end(); iter++)
 		{
 			out << *iter << " ";
@@ -137,61 +143,61 @@ int get_ssid(DOT11_SSID &ssid, std::string &_out)
 	if (ssid.uSSIDLength == 0)
 	{
 		_out.clear();
-		return false;
+		return 1;
 	}
 	else
 	{
 		for (uint k = 0; k < ssid.uSSIDLength; k++)
 			_out.push_back(ssid.ucSSID[k]);
 	}
-	return true;
+	return 0;
 }
 
 int find_at_radiomap(std::string &key, 
 	std::map<std::string, LocalizationNode> &container, LocalizationNode *&_out)
 {
-	std::map<std::string, LocalizationNode>::iterator iter = container.find(key);
+	RADIOMAP_ITER iter = container.find(key);
 	if (iter == container.end())
 	{
-		return false;
+		return 1;
 	}
 	else
 	{
 		_out = &iter->second;
-		return true;
+		return 0;
 	}
 }
 
 int add_to_radiomap(LocalizationNode &value, std::map<std::string, 
 	LocalizationNode> &container)
 {
-	std::map<std::string, LocalizationNode>::iterator iter = container.find(value.get_key());
-	std::vector<int>::iterator rhs_vector_iter;
+	RADIOMAP_ITER iter = container.find(value.get_key());
+	VECTOR_INT_ITER rhs_vector_iter;
 	if (iter == container.end())
 	{
 		container.insert(std::make_pair(value.get_key(), value));
 	}
 	else
 	{
-		if ((rhs_vector_iter = iter->second.find_the_first_unidentical_position(value.get_all_recoder()))
-			!= value.get_all_recoder().end())
+		if ((rhs_vector_iter = iter->second.find_the_first_unidentical_position(value.get_all_recoders()))
+			!= value.get_all_recoders().end())
 		{
-			for (; rhs_vector_iter != value.get_all_recoder().end(); rhs_vector_iter++)
+			for (; rhs_vector_iter != value.get_all_recoders().end(); rhs_vector_iter++)
 			{
-				iter->second.get_all_recoder().push_back(*rhs_vector_iter);
+				iter->second.get_all_recoders().push_back(*rhs_vector_iter);
 			}
 		}
 	}
-	return true;
+	return 0;
 }
 
 int check_set_padding(std::map<std::string, LocalizationNode> &_in)
 {
-	std::map<std::string, LocalizationNode>::iterator iter = _in.begin();
+	RADIOMAP_ITER iter = _in.begin();
 	int max_size = -1, rssi_record_size, padding = 99999;
 	for (; iter != _in.end(); iter++)
 	{
-		rssi_record_size = iter->second.get_all_recoder().size();
+		rssi_record_size = iter->second.get_all_recoders().size();
 		if (rssi_record_size != max_size)
 		{
 			max_size = rssi_record_size;
@@ -200,7 +206,7 @@ int check_set_padding(std::map<std::string, LocalizationNode> &_in)
 	}
 	for (iter = _in.begin(); iter != _in.end(); iter++)
 	{
-		rssi_record_size = iter->second.get_all_recoder().size();
+		rssi_record_size = iter->second.get_all_recoders().size();
 		if (rssi_record_size != max_size)
 			iter->second.add_recoder(padding);
 	}
@@ -215,7 +221,8 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 	DWORD dwResult = 0;
 	DWORD dwRetVal = 0;
 	WCHAR GuidString[39] = { 0 };
-	uint i, j, k, ret;
+	uint i; 
+	int ret;
 	PWLAN_INTERFACE_INFO_LIST pIfList = NULL;
 	PWLAN_INTERFACE_INFO pIfInfo = NULL;
 	PWLAN_BSS_ENTRY pBssEntry = NULL;
@@ -300,15 +307,15 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 				{
 					pBssEntry = &pBssList->wlanBssEntries[i];
 					get_mac_id(pBssEntry->dot11Bssid, mac_id);
-					if (find_at_radiomap(mac_id, result_map, pLocalizationNode) == true)
+					if (find_at_radiomap(mac_id, result_map, pLocalizationNode) == 0)
 					{
 						pLocalizationNode->add_recoder(pBssEntry->lRssi);
 					}
-					else if (get_ssid(pBssEntry->dot11Ssid, ret_ssid) == true)
+					else if (get_ssid(pBssEntry->dot11Ssid, ret_ssid) == 0)
 					{
 						LocalizationNode new_ap(mac_id, ret_ssid, pBssEntry->lRssi);
 						ret = add_to_radiomap(new_ap, result_map);
-						if (ret != true)
+						if (ret != 0)
 						{
 							printf("ERROR: add_to_radiomap error");
 							exit(1);
@@ -328,20 +335,23 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 		WlanFreeMemory(pIfList);
 		pIfList = NULL;
 	}
-	return true;
+	return 0;
 }
 
-int test_main_wlan_bss_info()
+int main()
 {
 	FILE *stream = NULL;
-	errno_t err;
-	int ret, 
-	int repeat = 20;
+	errno_t err = 0;
+	int ret = 0;
+	int repeat = 5;
+	int input = 0;
 	std::map<std::string, LocalizationNode> radiomap;
 	// Reassign "stderr" to "freopen.out": 
 	err = freopen_s(&stream, "freopen.txt", "w", stdout);
 	if (err != 0)
+	{
 		fprintf(stdout, "error on freopen\n");
+	}
 	else
 	{
 		fprintf(stdout, "successfully reassigned\n"); fflush(stdout);
@@ -349,7 +359,7 @@ int test_main_wlan_bss_info()
 	while (repeat--)
 	{
 		ret = get_ap_rssi_data(radiomap);
-		if (ret != true)
+		if (ret != 0)
 		{
 			printf("ERROR: get_ap_rssi_data encounter error");
 			exit(1);
@@ -358,13 +368,13 @@ int test_main_wlan_bss_info()
 		Sleep(1000);
 	}
 	//diagnose the rssi data of aps
-	std::map<std::string, LocalizationNode>::iterator iter = radiomap.begin();
+	RADIOMAP_ITER iter = radiomap.begin();
 	for (; iter != radiomap.end(); iter++)
 	{
 		std::cout << iter->second << std::endl;
 	}
 	//printf("Digits 10 equal:\n\tHex: %i  Octal: %i  Decimal: %i\n", 0x10, 010, 10);
-	int input = 0;
+	
 	//scanf_s("%d", &input);
 	fflush(stream);
 	fclose(stream);

@@ -34,132 +34,24 @@ Current Index: 0
   Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
   Interface State[0]:	 Connected
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
+mac_id: 00-26-3E-E2-59-01	ssid: seu-wlan
+rssi recoder: -80 -80 -80 -80 -78 
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
+mac_id: 00-26-3E-FB-28-01	ssid: seu-wlan
+rssi recoder: -49 -48 -48 -48 -48 
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
+mac_id: 00-26-3E-FB-72-40	ssid: seu-wlan
+rssi recoder: -65 -65 -65 -65 -65 
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
+mac_id: 02-22-B2-BE-B6-C5	ssid: WZD-中山院中门厅
+rssi recoder: -81 -81 -81 -81 -81 
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
+mac_id: 02-2F-FF-ED-28-EA	ssid: WZD-中山院一楼中
+rssi recoder: -58 -58 -58 -58 -58 
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
+mac_id: 06-17-C4-9E-4D-83	ssid: ximisty
+rssi recoder: -80 -80 -80 -80 -80 
 
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-Nunber Entries: 1
-Current Index: 0
- Interface Index[0]:	 0
-  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
-  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
-  Interface State[0]:	 Connected
-
-mac_id: 00-B0-C1-03-1C-E6	ssid: wopow-1CE6
-rssi recoder: -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 -47 
-
-mac_id: 0C-72-2C-52-B9-5E	ssid: tplink
-rssi recoder: -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 -81 
-
-mac_id: 20-4E-7F-19-43-68	ssid: TPLINK-5Z62G
-rssi recoder: -68 -68 -68 -68 -70 -71 -71 -70 -71 -72 -71 -72 -68 -68 -69 -71 -71 -72 -72 -72 
-
-mac_id: 4C-1F-CC-B3-F4-39	ssid: ChinaNet-acQF
-rssi recoder: -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 -82 
-
-mac_id: 8C-BE-BE-21-50-D3	ssid: Xiaomi_50D2
-rssi recoder: -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 -48 
-
-mac_id: BC-D1-77-92-ED-F8	ssid: China-CMCC
-rssi recoder: -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 -85 
-
-mac_id: C0-61-18-5D-12-82	ssid: BaLuoBo3
-rssi recoder: -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 -78 
-
-mac_id: D8-15-0D-C5-4E-E8	ssid: TP-LINK_26-C
-rssi recoder: -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 -79 
+mac_id: 4C-96-14-27-EF-41	ssid: seu-wlan
+rssi recoder: -60 -60 -60 -60 -61 
 
