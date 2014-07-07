@@ -69,7 +69,11 @@
     <ClCompile Include="int_to_string.cpp" />
     <ClCompile Include="wifi_interface.cpp" />
     <ClCompile Include="wifi_list.cpp" />
+    <ClCompile Include="win_http_write_data.cpp" />
     <ClCompile Include="wlan_bss_info.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wlan_bss_info.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

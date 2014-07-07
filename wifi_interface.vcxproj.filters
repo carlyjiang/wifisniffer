@@ -33,5 +33,13 @@
     <ClCompile Include="http_transport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="win_http_write_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wlan_bss_info.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

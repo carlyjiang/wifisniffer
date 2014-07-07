@@ -1,34 +1,13 @@
-#ifndef UNICODE
-#define UNICODE
-#endif
+#ifndef __WLAN_BSS_INFO_CPP__
+#define __WLAN_BSS_INFO_CPP__
 
-#ifndef __WLAN_BSS_INFO__
-#define __WLAN_BSS_INFO__
-
-#include <windows.h>
-#include <wlanapi.h>
-#include <objbase.h>
-#include <wtypes.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string>
-#include <map>
-#include <vector>
-#include <utility>
-#include <iostream>
-#include <algorithm>
+#include "wlan_bss_info.h"
 
 // Need to link with Wlanapi.lib and Ole32.lib
 #pragma comment(lib, "wlanapi.lib")
 #pragma comment(lib, "ole32.lib")
 
-class LocalizationNode;
 
-typedef unsigned int uint;
-typedef std::vector<int>::iterator VECTOR_INT_ITER;
-typedef std::vector<int>::const_iterator VECTOR_INT_CONST_ITER;
-typedef std::map<std::string, LocalizationNode>::iterator RADIOMAP_ITER;
-typedef std::map<std::string, LocalizationNode>::const_iterator RADIOMAP_CONST_ITER;
 
 class LocalizationNode
 {
@@ -154,7 +133,7 @@ int get_ssid(DOT11_SSID &ssid, std::string &_out)
 }
 
 int find_at_radiomap(std::string &key, 
-	std::map<std::string, LocalizationNode> &container, LocalizationNode *&_out)
+	RADIOMAP &container, LocalizationNode *&_out)
 {
 	RADIOMAP_ITER iter = container.find(key);
 	if (iter == container.end())
@@ -191,7 +170,7 @@ int add_to_radiomap(LocalizationNode &value, std::map<std::string,
 	return 0;
 }
 
-int check_set_padding(std::map<std::string, LocalizationNode> &_in)
+int check_set_padding(RADIOMAP &_in)
 {
 	RADIOMAP_ITER iter = _in.begin();
 	int max_size = -1, rssi_record_size, padding = 99999;
@@ -213,7 +192,7 @@ int check_set_padding(std::map<std::string, LocalizationNode> &_in)
 	return true;
 }
 
-int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
+int get_ap_rssi_data(RADIOMAP &result_map)
 {
 	HANDLE hClient = NULL;
 	DWORD dwMaxClient = 2;
@@ -221,16 +200,17 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 	DWORD dwResult = 0;
 	DWORD dwRetVal = 0;
 	WCHAR GuidString[39] = { 0 };
-	uint i; 
-	int ret;
 	PWLAN_INTERFACE_INFO_LIST pIfList = NULL;
 	PWLAN_INTERFACE_INFO pIfInfo = NULL;
 	PWLAN_BSS_ENTRY pBssEntry = NULL;
 	PWLAN_BSS_LIST pBssList = NULL;
 	LocalizationNode *pLocalizationNode = NULL;
-	int iRet = 0;
 	std::string mac_id;
 	std::string ret_ssid;
+	int iRet = 0;
+	int ret;
+	uint i;
+
 	dwResult = WlanOpenHandle(dwMaxClient, NULL, &dwCurVersion, &hClient);
 	if (dwResult != ERROR_SUCCESS)
 	{
@@ -338,14 +318,15 @@ int get_ap_rssi_data(std::map<std::string, LocalizationNode> &result_map)
 	return 0;
 }
 
-int main()
+int wlan_bss_info()
 {
 	FILE *stream = NULL;
+	RADIOMAP radiomap;
 	errno_t err = 0;
 	int ret = 0;
-	int repeat = 5;
+	int repeat = 20;
 	int input = 0;
-	std::map<std::string, LocalizationNode> radiomap;
+	
 	// Reassign "stderr" to "freopen.out": 
 	err = freopen_s(&stream, "freopen.txt", "w", stdout);
 	if (err != 0)
