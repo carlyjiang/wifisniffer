@@ -7,8 +7,11 @@
 
 #include <Windows.h>
 #include <Winhttp.h>
-#include <stdio.h>
+#include <string.h>
+#include <iostream>
 #include "wlan_bss_info.h"
+
+using namespace std;
 
 #pragma comment(lib, "winhttp.lib")
 
@@ -95,15 +98,99 @@ int main()
 {
 	FILE *f = NULL;
 	freopen_s(&f, "data_html.txt", "w", stdout);
-	LPSTR str = "abcdefg";
-	send_data(str);
-	
+	RADIOMAP radiomap;
+	std::string json_data;
+	int ret = 0;
+	int len = 0;
+	int input = 0;
+	int index = -1;
+	int repeat = 10;
+	char *buf = NULL;
+	char num_to_str[20];
+	LocalizationNode *node = NULL;
 
+	while (repeat--)
+	{
+		ret = get_ap_rssi_data(radiomap);
+		if (ret != 0)
+		{
+			printf("ERROR: get_ap_rssi_data an error occurs\n");
+			exit(-1);
+		}
+	}
+	json_data += "[";
+	RADIOMAP_ITER iter = radiomap.begin();
+	for (; iter != radiomap.end(); iter++)
+	{
+		if (find_at_radiomap(std::string("C8-3A-35-46-2D-28"), radiomap, node) == 0)
+		{
+			cout << "ERROR AP: " << node->get_key() << endl
+				<< "SSID: ###" << node->get_ssid() << "###" << endl;
+		}
+		index = iter->second.get_ssid().find(' ');
+		if (index >= 0 && index < 1000)
+			continue;
 
+		json_data += "{\"mac_id\":\"";
+		json_data += iter->first;
+		json_data += "\",";
+		json_data += "\"ssid\":\"";
+		json_data += iter->second.get_ssid();
+		json_data += "\",";
+		json_data += "\"rssi\":[";
+
+		for (VECTOR_INT_ITER vector_iter = iter->second.get_all_recoders().begin();
+			vector_iter != iter->second.get_all_recoders().end(); vector_iter++)
+		{
+			_itoa_s(*vector_iter, num_to_str, 20, 10);
+			json_data += num_to_str;
+			json_data.push_back(',');
+		}
+		json_data += "]},\n";
+	}
+	json_data += "]";
+	//cout << json_data << endl;
+	//index = json_data.rfind(",]");
+	while ((index = json_data.rfind(",]")) < 100000 && index >=0)
+		json_data.replace(index, 2, "]");
+	while ((index = json_data.rfind(",\n]")) < 100000 && index >= 0)
+		json_data.replace(index, 3, "]");
+
+	//cout << "Local data\n" << json_data << endl;
+
+	//printf("%s\n", json_data.c_str());
+	const char *src = json_data.c_str();
+	len = strlen(src) + 1;
+	buf = new char[len];
+	strcpy_s(buf, len, src);
+
+	cout << "local buf\n" << buf << endl;
+	//send_data(buf);
 	fflush(f);
 	fclose(f);
+
+	//scanf_s("%d", &input);
+	delete[]buf;
+	return 0;
+}
+
+int main_check_error_ap()
+{
+	RADIOMAP radiomap;
+	LocalizationNode *node;
+	int repeat = 30;
+	while (repeat--)
+	{
+		get_ap_rssi_data(radiomap);
+		if (find_at_radiomap(std::string("C8-3A-35-46-2D-28"), radiomap, node) == 0)
+			cout << node->get_key() << endl;
+		Sleep(500);
+	}
+	cout << "done!" << endl;
+	cin.get();
 	return 0;
 }
 
 #endif
+
 

@@ -13,28 +13,31 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\tmp">
+      <UniqueIdentifier>{5ecb11d6-7799-43a8-b7e9-47e4eaa7c84a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="wifi_interface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="wifi_list.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="wlan_bss_info.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="int_to_string.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ClassTemp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="http_transport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ClassTemp.cpp">
+      <Filter>Source Files\tmp</Filter>
+    </ClCompile>
+    <ClCompile Include="int_to_string.cpp">
+      <Filter>Source Files\tmp</Filter>
+    </ClCompile>
+    <ClCompile Include="wifi_interface.cpp">
+      <Filter>Source Files\tmp</Filter>
+    </ClCompile>
+    <ClCompile Include="wifi_list.cpp">
+      <Filter>Source Files\tmp</Filter>
+    </ClCompile>
     <ClCompile Include="win_http_write_data.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\tmp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,1 +1,103 @@
-abcdefg
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+Nunber Entries: 1
+Current Index: 0
+ Interface Index[0]:	 0
+  InterfaceGUID[0]: {645D6664-5E23-47BE-9B6B-D07FBE258E09}
+  Interface Description[0]: Intel(R) Centrino(R) Advanced-N 6200 AGN
+  Interface State[0]:	 Not connected
+
+local buf
+[{"mac_id":"00-11-B5-19-B5-B9","ssid":"CMCC-EDU","rssi":[-85,-85,-85,-85,-85,-85,-85,-85,-85,-85]},
+{"mac_id":"00-15-70-91-99-CC","ssid":"NJUPT","rssi":[-74,-74,-74,-74,-74,-74,-74,-74,-74,-74]},
+{"mac_id":"00-15-70-91-9A-04","ssid":"NJUPT","rssi":[-66,-66,-66,-66,-66,-66,-66,-66,-66,-66]},
+{"mac_id":"00-15-70-91-9A-48","ssid":"NJUPT","rssi":[-79,-83,-83,-83,-83,-83,-83,-83,-83,-83]},
+{"mac_id":"00-15-70-91-9C-AC","ssid":"NJUPT","rssi":[-71,-71,-71,-71,-71,-71,-71,-71,-71,-71]},
+{"mac_id":"00-15-70-91-9D-DC","ssid":"NJUPT","rssi":[-89,-89,-89,-89,-89,-89,-89,-89,-89,-89]},
+{"mac_id":"00-15-70-91-9F-20","ssid":"NJUPT","rssi":[-75,-75,-75,-75,-75,-75,-75,-75,-75,-75]},
+{"mac_id":"00-15-70-9F-20-8C","ssid":"NJUPT","rssi":[-86,-86,-86,-86,-86,-86,-86,-86,-86,-86]},
+{"mac_id":"00-15-70-9F-20-AC","ssid":"NJUPT","rssi":[-80,-80,-80,-80,-80,-80,-80,-80,-80,-80]},
+{"mac_id":"00-22-FA-0F-24-55","ssid":"yx","rssi":[-52,-52,-52,-52,-52,-52,-52,-52,-52,-52]},
+{"mac_id":"00-23-6C-87-D1-9E","ssid":"Connectify-me","rssi":[-89,-89,-89,-89,-89,-89,-89,-89,-89,-89]},
+{"mac_id":"00-87-36-44-F3-C2","ssid":"360WiFi-F3C2","rssi":[-88,-88,-88,-88,-88,-88,-88,-88,-88,-88]},
+{"mac_id":"00-87-46-10-18-D1","ssid":"yusl","rssi":[-82,-82,-82,-82,-82,-82,-82,-82,-82,-82]},
+{"mac_id":"06-25-D3-6F-79-87","ssid":"yuang","rssi":[-70,-70,-70,-70,-70,-70,-70,-70,-70,-70]},
+{"mac_id":"20-DC-E6-C3-49-C0","ssid":"MERCURY_C349C0","rssi":[-80,-80,-80,-80,-80,-80,-80,-80,-80,-80]},
+{"mac_id":"30-87-30-01-BC-FD","ssid":"ChinaNet-VRtt","rssi":[-88,-88,-88,-88,-88,-88,-88,-88,-88,-88]},
+{"mac_id":"30-87-30-01-BC-FE","ssid":"iTV-VRtt","rssi":[-88,-88,-88,-88,-88,-88,-88,-88,-88,-88]},
+{"mac_id":"38-83-45-4B-34-50","ssid":"433","rssi":[-79,-79,-79,-79,-79,-79,-79,-79,-79,-79]},
+{"mac_id":"3C-E5-A6-E9-61-B0","ssid":"ChinaNet","rssi":[-74,-74,-74,-74,-74,-74,-74,-74,-74,-74]},
+{"mac_id":"3C-E5-A6-E9-61-B1","ssid":"ChinaNet-EDU","rssi":[-74,-74,-74,-74,-74,-74,-74,-74,-74,-74]},
+{"mac_id":"3C-E5-A6-E9-6A-D0","ssid":"ChinaNet","rssi":[-56,-56,-56,-56,-56,-56,-56,-56,-56,-56]},
+{"mac_id":"3C-E5-A6-E9-6A-D1","ssid":"ChinaNet-EDU","rssi":[-56,-56,-56,-56,-56,-56,-56,-56,-56,-56]},
+{"mac_id":"44-AD-D9-BA-5E-C1","ssid":"HUAZHU_StarwayHotel","rssi":[-86,-86,-86,-86,-86,-86,-86,-86,-86,-86]},
+{"mac_id":"6C-19-8F-0C-D4-A8","ssid":"dlink-555","rssi":[-83,-83,-83,-83,-83,-83,-83,-83,-83,-83]},
+{"mac_id":"90-94-E4-3A-D6-04","ssid":"GIS320","rssi":[-74,-74,-74,-74,-74,-74,-74,-74,-74,-74]},
+{"mac_id":"9C-D6-43-78-E8-D8","ssid":"D-Link_jwc","rssi":[-79,-79,-79,-79,-79,-79,-79,-79,-79,-79]},
+{"mac_id":"BC-D1-77-8E-2E-D8","ssid":"TP-LINK_8E2ED8","rssi":[-67,-67,-67,-67,-67,-67,-67,-67,-67,-67]},
+{"mac_id":"BC-F6-85-9B-42-91","ssid":"D-Link_DIR-600A","rssi":[-59,-59,-59,-58,-58,-58,-58,-58,-58,-58]},
+{"mac_id":"C4-A8-1D-67-4E-5B","ssid":"arm9.net","rssi":[-81,-81,-81,-81,-81,-81,-81,-81,-81,-81]},
+{"mac_id":"D0-C7-C0-84-18-3A","ssid":"TP-LINK_183A","rssi":[-83,-83,-83,-83,-83,-83,-83,-83,-83,-83]},
+{"mac_id":"D8-15-0D-FD-2B-2B","ssid":"FreeWiFi","rssi":[-87,-87,-87,-87,-87,-87,-87,-87,-87,-87]},
+{"mac_id":"D8-5D-4C-58-67-7A","ssid":"fhhqjd06","rssi":[-86,-86,-86,-86,-86,-86,-86,-86,-86,-86]}]
