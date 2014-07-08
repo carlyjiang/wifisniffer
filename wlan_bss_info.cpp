@@ -34,6 +34,18 @@ int get_mac_id(DOT11_MAC_ADDRESS &_in, std::string &_out)
 	return true;
 }
 
+//temporary method to avoid chinese char violation
+bool is_char_out_range(UCHAR _char)
+{
+	if (_char >= 'a' && _char <= 'z' 
+		|| _char >= 'A' && _char <= 'Z' 
+		|| _char >= '0' && _char <= '9'
+		|| _char == '-' || _char == '_' || _char == '.')
+		return false;
+	else
+		return true;
+}
+
 int get_ssid(DOT11_SSID &ssid, std::string &_out)
 {
 	_out.clear();
@@ -45,6 +57,9 @@ int get_ssid(DOT11_SSID &ssid, std::string &_out)
 	else
 	{
 		for (uint k = 0; k < ssid.uSSIDLength; k++)
+		if (is_char_out_range(ssid.ucSSID[k]) == true)
+			_out.push_back('*');
+		else
 			_out.push_back(ssid.ucSSID[k]);
 	}
 	return 0;

@@ -164,8 +164,8 @@ int main()
 	buf = new char[len];
 	strcpy_s(buf, len, src);
 
-	cout << "local buf\n" << buf << endl;
-	//send_data(buf);
+	//cout << "local buf\n" << buf << endl;
+	send_data(buf);
 	fflush(f);
 	fclose(f);
 
