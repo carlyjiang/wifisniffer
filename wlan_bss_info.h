@@ -79,7 +79,7 @@ public:
 		return true;
 	}
 
-	std::vector<int> & get_all_recoders()
+	std::vector<int> &get_all_recoders()
 	{
 		return rssi_recoder;
 	}
@@ -112,14 +112,11 @@ public:
 	}
 };
 
-
-int add_to_radiomap(LocalizationNode &value, std::map<std::string,
-	LocalizationNode> &container);
+int add_to_radiomap(LocalizationNode &value, RADIOMAP &container);
 
 int check_set_padding(RADIOMAP &_in);
 
-int find_at_radiomap(std::string &key,
-	RADIOMAP &container, LocalizationNode *&_out);
+int find_at_radiomap(std::string &key, RADIOMAP &container, LocalizationNode *&_out);
 
 int get_ap_rssi_data(RADIOMAP &result_map);
 
@@ -132,4 +129,3 @@ std::ostream &operator<<(std::ostream &out, const LocalizationNode &data);
 int wlan_bss_info();
 
 #endif
-
