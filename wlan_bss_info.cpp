@@ -65,7 +65,7 @@ int get_ssid(DOT11_SSID &ssid, std::string &_out)
 	return 0;
 }
 
-//if not found, out is set to NULL
+//if not found, _out is set to NULL
 int find_at_radiomap(std::string &key, 
 	RADIOMAP &container, LocalizationNode *&_out)
 {
@@ -82,8 +82,7 @@ int find_at_radiomap(std::string &key,
 	}
 }
 
-int add_to_radiomap(LocalizationNode &value, std::map<std::string, 
-	LocalizationNode> &container)
+int add_to_radiomap(LocalizationNode &value, RADIOMAP &container)
 {
 	RADIOMAP_ITER iter = container.find(value.get_key());
 	VECTOR_INT_ITER rhs_vector_iter;

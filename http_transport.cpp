@@ -94,7 +94,7 @@ int send_data(LPSTR data)
 	return 0;
 }
 
-int main()
+int http_transport_data()
 {
 	FILE *f = NULL;
 	freopen_s(&f, "data_html.txt", "w", stdout);
@@ -118,6 +118,7 @@ int main()
 			exit(-1);
 		}
 	}
+
 	json_data += "[";
 	RADIOMAP_ITER iter = radiomap.begin();
 	for (; iter != radiomap.end(); iter++)
@@ -149,22 +150,16 @@ int main()
 		json_data += "]},\n";
 	}
 	json_data += "]";
-	//cout << json_data << endl;
-	//index = json_data.rfind(",]");
 	while ((index = json_data.rfind(",]")) < 100000 && index >=0)
 		json_data.replace(index, 2, "]");
 	while ((index = json_data.rfind(",\n]")) < 100000 && index >= 0)
 		json_data.replace(index, 3, "]");
 
-	//cout << "Local data\n" << json_data << endl;
-
-	//printf("%s\n", json_data.c_str());
 	const char *src = json_data.c_str();
 	len = strlen(src) + 1;
 	buf = new char[len];
 	strcpy_s(buf, len, src);
 
-	//cout << "local buf\n" << buf << endl;
 	send_data(buf);
 	fflush(f);
 	fclose(f);
